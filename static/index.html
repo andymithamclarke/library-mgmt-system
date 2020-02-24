@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>PontyBridge University: Library Navigation System</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+		<meta name="description" content="Library Navigation System for University of PontyBridge">
+
+	</head>
+
+
+	<body>
+		<!-- Link Axios -->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+		<header class="flex-container align-center">
+			<!--This section contains the logo & logo text for the page-->
+			<div class="logo-container align-center flex-container">
+				<img id="header-logo" src="Images/Ponty_logo.svg" alt="PontyBridge University Logo">
+				<p id="logo-text"><a href="index.html">PontyBridge University</a></p>
+			</div>
+			<p id="home-link" class="label-text"><a href="index.html">Home</a></p>
+		</header>
+
+		<!--
+		==================================
+		CONTROL PANEL SECTION 
+		==================================
+		-->
+
+		<section class="system-control-container flex-columns">
+			<h1>
+				<a href="index.html">Library Navigation System</a>
+			</h1>
+			<section>
+			<!-- Main Control Panel to access links to other pages-->
+				<div class="flex-container control-panel-container justify-center">
+					<button id="catalogue-control-button" class="button control-button">
+						<a href="catalogue.html">Catalogue</a>
+					</button>
+					<button id="users-control-button" class="button control-button">
+						<a href="users.html">Users</a>
+					</button>
+					<button class="button control-button">
+						<a href="loans.html">Loans</a>
+					</button>
+				</div>
+			</section>
+			<div class="line-break"></div>
+		</section>
+
+
+
+		<!--
+		=========================
+		END OF CONTROL PANEL SECTION 
+		=========================
+		-->
+
+		<!--
+		=========================
+		SEARCH CONTAINER SECTION  
+		=========================
+		-->
+
+		<!-- Contains central search box -->
+
+		<section id="central-search-section" class=" navigation-area form-section-container">
+
+				<p class="instruction-text col-row-1-2">SEARCH THE LIBRARY</p>
+				<p class="instruction-text-small col-row-2-3">Search the Library for Authors, Books, Users or Loans. <br>Choose a category. Enter a Query. Pick Search Type.</p>
+
+				<p class="row-3-col-2">WHAT</p>
+				<select title="Choose what to search" class="row-4-col-2" id="menu-type-selection" data-trigger="">
+                    <option id="search-authors">Authors</option>
+                    <option id="search-books">Books</option>
+                    <option id="search-users">Users</option>
+                    <option id="search-loans">Loans</option>
+              	</select>
+
+              	<p class="row-3-col-4">SEARCH TERM</p>
+				<input title="SEARCH" id="search-box-input" class="form-search-bar col-row-4" type="text" placeholder="eg. Author's Name, Book Title, Loan, User">
+
+				<p class="row-3-col-6">SEARCH BY</p>
+				<select title="Choose how to search" class="row-4-col-6" id="type-of-search-selection" data-trigger="">
+                    <option id="search-option-one">Name</option>
+                    <option id="search-option-two"></option>
+                    <option id="search-option-three"></option>
+              	</select>
+
+			<button id="submit-search-button" class="row-5-col-4 grey-box flex-container align-center justify-center">
+				<span>
+					SEARCH
+				</span>
+			</button>
+		</section>
+
+		<!--
+		=========================
+		END OF SEARCH CONTAINER SECTION  
+		=========================
+		-->
+
+		<!--
+		=========================
+		FORM SECTION (ADD, DELETE, UPDATE) 
+		=========================
+		-->
+		<!-- Response Message Section (Where response messages will be generated -->
+
+		<section class="display-none justify-center align-center response-message-section">
+						
+		</section>
+
+		<!-- Section to contain forms -->
+		<section class="form-modify-area specific-form-creation-area flex-columns display-none">
+			<div class="specific-form-title flex-columns justify-center"></div>
+			<div class="specific-form-input flex-columns align-center"></div>
+		</section>
+
+		<section class="search-area modify-area">
+			
+		</section>
+
+		<!--
+		=========================
+		END OF FORM SECTION 
+		=========================
+		-->
+
+
+		<!-- 
+		==========================
+		RESULTS AREA: CONTAINS RESULTS OF QUERY
+		===========================
+		-->
+		<!--
+		THIS IS THE SECTION WHERE ELEMENTS WILL BE ADDED TO DISPLAY QUERY RESULTS
+		-->
+		<section class="flex-columns">
+			<div class="results-header">
+
+			</div>
+			<div  class="flex-columns results-field">
+		
+			</div>
+			
+		</section>
+		
+		<!--
+		=========================
+		END OF RESULTS AREA SECTION 
+		=========================
+		-->
+
+		<!--
+		Footer to provide gap at bottom of page
+		-->
+		<footer>
+			
+		</footer>
+		<!--Link to specific JS file -->
+		<script type="module" src="script.js"></script>
+	</body>
+</html>

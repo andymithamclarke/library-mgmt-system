@@ -1,0 +1,734 @@
+/*
+=============
+STYLE PAGE
+=============
+
+-----------------------------------
+
+=============
+GENERAL
+=============
+*/
+
+body, * {
+	font-size: 1em;
+	margin: 0 auto;
+}
+
+body {
+	background-color: #9A55B2;
+}
+
+
+h1 {
+	font-family: 'Quattrocento', serif;
+	font-size: 3em;
+	letter-spacing: .2em;
+	color: #fff;
+}
+
+p, button, div, label {
+	font-family: 'Quattrocento Sans', sans-serif;
+	letter-spacing: .1em;
+
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+header a:hover {
+	color: #282828;
+}
+
+/*
+=============
+FLEX CONTAINER SETTINGS
+=============
+*/
+
+.flex-container {
+	display: flex;
+}
+
+.label-container, .add-form-container {
+	display: flex;
+	flex-direction: column;
+	margin: .5em 0;
+}
+
+.flex-columns {
+	display: flex;
+	flex-direction: column;
+}
+
+.display-none {
+	display: none;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.align-center {
+	align-content: center;
+	align-items: center;
+}
+
+/*
+=============
+VERY TOP OF PAGE
+=============
+*/
+
+
+.logo-container {
+	width: 80vw;
+	margin: .5em;
+	color: #fff;
+}
+
+#header-logo, #logo-text {
+	margin: .5em;
+}
+
+#header-logo {
+	width: 3em;
+}
+
+/*
+=============
+CENTRAL NAV SYSTEM
+=============
+*/
+
+.system-control-container {
+	width: 100vw;
+	height: 45vh;
+	justify-content: space-around;
+}
+
+.navigation-area {
+	height: auto;
+}
+
+.control-panel-container {
+	height: 10vh;
+}
+
+	/*
+	=============
+	Buttons
+	=============
+	*/
+.button {
+	background-color: #46344E;
+	cursor: pointer;
+	color: #fff;
+	border: 0;
+	border-radius: .3em;
+	box-shadow: 0.2em 0.2em #282828;
+}
+
+.control-button {
+	width: 8em;
+	font-size: 1.7em;
+	height: 2em;
+	margin: 2em;
+}
+
+
+/* 
+Code to make font expand on hover
+Adapted from 'Collection of Button Hover Effects' by David Conner on 'codepenn'
+https://codepen.io/davidicus/pen/emgQKJ
+accessed 10/12/2019
+*/
+.control-button:hover,
+.control-button:focus {
+	text-shadow: 0.05em 0.05em #282828;
+	letter-spacing: 0.2em;
+	transition: all 0.35s linear;
+	outline: 0;
+}
+
+.line-break {
+	height: .15em;
+	width: 75vw;
+	background-color: #282828;
+	opacity: .7;
+}
+
+/*
+=============
+CONTROL AREA
+=============
+*/
+
+#author-book-control-panel, #users-control-bar, #loans-control-bar {
+	justify-content: space-around;
+	width: 60vw;
+}
+
+.catalogue-button {
+	width: 7em;
+	height: 3em;
+	font-size: 1.5em;
+	margin: .3em 0;
+}
+
+.sub-catalogue-button {
+	font-size: .8em;
+	height: 5vh;
+	width: 15em;
+	margin: 0 1em; 
+}
+
+#search-box {
+	width: 50vw;
+	height: 4vh;
+	border-radius: .5em;
+}
+
+.search-container {
+	margin: 4em auto;
+}
+
+.add-update-delete-container {
+	padding: 4em 0;
+	width: 60vw;
+}
+
+/*
+=============
+RESULTS FIELD
+=============
+*/
+
+/*STLYING for Results Container */
+.result-container, .result-header-container {
+	width: 75vw;
+	background-color: #E2E3DF;
+	height: auto;
+	padding: 2em 0;
+	border-style: solid;
+	border-color: #282828;
+}
+
+.result-container:hover {
+	background-color:#fff;
+}
+
+.results-header {
+	margin-top: 10vh;
+}
+
+.post-button {
+	margin-right: .5em;
+}
+/*
+=============
+GRID LAYOUT
+=============
+*/
+/*GRID FORMAT for Form Area */
+
+/*GRID FORMAT for Results Container & Header */
+.result-container {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-gap: 0.8em;
+	/*Revise Alignment */
+	margin-top: .5em;
+}
+
+.result-header-container {
+	font-size: 1.3em;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(1, auto);
+	grid-gap: 0.2em;
+	margin-top: .5em;
+}
+
+.result-container p, .result-header-container p {
+	text-align: center;
+}
+
+.col-1 {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.row-2-col-2-4 {
+	grid-column: 2/4;
+	grid-row: 2;
+}
+
+.row-2-col-1-4 {
+	grid-column: 1/4;
+	grid-row: 2;
+}
+
+.row-3-col-1-4 {
+	grid-column: 1/4;
+	grid-row: 3;
+}
+
+.row-4-col-1-4 {
+	grid-column: 1/4;
+	grid-row: 4;
+}
+
+.row-5-col-1-4 {
+	grid-column: 1/4;
+	grid-row: 5;
+}
+
+.col-8-9 {
+	grid-column: 8 / 9;
+	grid-row: 2;
+}
+
+.row-3-col-8-9 {
+	grid-column: 7 / 8;
+	grid-row: 3;
+}
+
+.col-5-7 {
+	grid-column: 5 / 7;
+	grid-row: 2;
+}
+
+.row-3-col-2 {
+	grid-column: 2;
+	grid-row: 3;
+}
+
+.row-4-col-2 {
+	grid-column: 2;
+	grid-row: 4;
+}
+
+.row-3-col-6 {
+	grid-column: 6;
+	grid-row: 3;
+}
+
+.row-4-col-6 {
+	grid-column: 6;
+	grid-row: 4;
+}
+
+.no-row-col-6-8 {
+	grid-column: 6 / 8;	
+}
+
+.no-row-col-5 {
+	grid-column: 5;
+}
+
+.col-6-8 {
+	grid-column: 6 / 8;	
+	grid-row: 2;
+}
+
+.col-4 {
+	grid-column: 4;
+	grid-row: 2
+}
+
+.no-row-col-4 {
+	grid-column: 4;
+}
+
+.col-5 {
+	grid-column: 5;
+	grid-row: 2
+}
+
+.col-7 {
+	grid-column: 7;
+	grid-row: 2;
+}
+
+.no-row-col-5-7 {
+	grid-column: 5 / 7;
+}
+
+.no-row-col-7 {
+	grid-column: 7;
+}
+
+.no-row-col-7-9 {
+	grid-column: 7/8;
+}
+
+.row-2-col-3-8 {
+	grid-column: 3/8;
+	grid-row: 2;
+}
+
+.row-3-col-3-8 {
+	grid-column: 3/8;
+	grid-row: 3;
+}
+
+.row-4-col-3-8 {
+	grid-column: 3/8;
+	grid-row: 4;
+}
+
+.row-5-col-3-8 {
+	grid-column: 3/8;
+	grid-row: 5;
+}
+
+.col-row-1-2 {
+	grid-column: 2/7;
+	grid-row: 1;
+}
+
+.col-row-2-3 {
+	grid-column: 2/7;
+	grid-row: 2;
+	line-height: 2.5em;
+}
+
+.col-row-4 {
+	grid-column: 2/7;
+	grid-row: 4;
+}
+
+.row-3-col-4 {
+	grid-row: 3;
+	grid-column: 4;
+}
+
+.row-4-col-4 {
+	grid-row: 4;
+	grid-column: 4;
+}
+
+.row-5-col-4 {
+	grid-row: 5;
+	grid-column: 4;
+}
+
+.row-6-col-4 {
+	grid-row: 6;
+	grid-column: 4;
+}
+
+/*
+=============
+END OF GRID LAYOUT
+=============
+*/
+
+/*
+=============
+FORM SECTION FOR UPDATE ADD OR DELETE
+=============
+*/
+
+#new-author-name-input {
+	width: 30vw;
+}
+
+#update-author-form, .specific-form-creation-area {
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	margin-top: 3em;
+	width: 80vw;
+}
+
+.response-message-section {
+	margin: 5vh 25vw;
+	width: 50vw;
+}
+
+.specific-form-creation-area, .response-message-section {
+	padding-top: 3em;
+	box-shadow: .2em .2em .2em #3f2747;	
+	border: 1px solid #282828;
+	border-radius: 2em;
+	background-color: #cba9d6;
+}
+
+.specific-form-title {
+	text-align: center;
+	color: #fff;
+	line-height: 2em;
+}
+
+.specific-form-input {
+	justify-content: space-between;
+	width: 75vw;
+	height: auto;
+	color: #fff;
+	margin-top: 3em; 
+	margin-bottom: 3em;
+}
+
+
+.label-container, .add-form-container {
+	justify-content: space-between;
+	height: 15vh;
+}
+
+.form-search-bar {
+	border: 1px solid #282828;
+	border-radius: .2em;
+	width: 40vw;
+	height: 3vh;
+	background-color: #fff;
+}
+
+.single-input-form-container, .form-section-container {
+	box-shadow: .2em .2em .2em #3f2747;
+	padding: 4em 0;
+	width: 90%;
+	border: 1px solid #282828;
+	background-color: #c486d9;
+	color: #fff;
+	display: grid;
+	grid-gap: 2.5em;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(3, auto);
+	margin: 4em auto;
+}
+
+
+.instruction-text, .instruction-text-small  {
+	text-align: center;
+	color: #282828;
+	line-height: 2em;
+	margin-bottom: 2em;
+}
+
+.instruction-text {
+	font-size: 1.3em;
+}
+
+.instruction-text-small {
+	font-size: .9em;
+}
+
+.label-text {
+	text-align: center;
+	font-size: 1.1em;
+	letter-spacing: .3em;
+}
+
+.submit-button {
+	margin-top: 3em;
+}
+/*
+=============
+SUBMIT BUTTON
+=============
+*/
+
+.grey-box, .small-grey-box, .post-button {
+	color: #fff;
+	background-color: #282828;
+	margin-left: 1em;
+	cursor: pointer;
+}
+
+.grey-box {
+	height: 10vh;
+	width: 10vw;
+}
+
+.small-grey-box {
+	height: 5vh;
+	width: 10vw;
+}
+
+.post-button {
+	height: 5vh;
+	width: 8vw;
+	font-size: 1em;
+}
+
+.search-box-input {
+	width: 35vw;
+}
+
+/*
+=============
+FOOTER
+=============
+*/
+
+footer {
+	width: 100vw;
+	height: 20vh;
+}
+
+
+/*
+============================================================
+============================================================
+
+MEDIA QUERIES
+
+============================================================
+============================================================
+*/
+
+
+/*
+=========
+1150px
+=========
+*/
+
+@media (max-width: 1150px) {
+    body {
+        font-size: .8em;
+    }
+
+    select {
+    	background-color: #f2f2f2;
+    }
+
+}
+
+/*
+=========
+960 px
+=========
+*/
+
+@media (max-width: 960px) {
+    .catalogue-button {
+    	font-size: 1.3em;
+    }
+
+    .result-container, .result-header-container {
+    	width: 85vw;
+    }
+
+    .sub-catalogue-button {
+    	height: 5vh;
+    }
+}
+
+/*
+=========
+800 px
+=========
+*/
+
+@media (max-width: 800px) {
+	body {
+        font-size: .8em;
+    }
+
+    .control-button, .catalogue-button {
+        margin: 1em;
+    }
+
+    .system-control-container {
+    	height: 30vh;
+    }
+
+    .grey-box {
+    	padding: 1em;
+    }
+}
+
+
+/*
+=========
+700 px
+=========
+*/
+
+@media (max-width: 700px) {
+	body {
+        font-size: 1em;
+    }
+
+    h1 {
+    	font-size: 2em;
+    }
+
+    .instruction-text {
+    	font-size: .8em;
+    }
+
+    .label-text {
+    	font-size: .8em;
+    }
+
+    .control-button {
+    	font-size: 1.3em;
+    	margin: .5em;
+    }
+
+    .catalogue-button {
+    	font-size: 1em;
+    	margin: 0 .3em;
+    }
+
+    .sub-catalogue-button, .post-button {
+    	font-size: .7em;
+    }
+
+    .result-container, .result-header-container {
+    	width: 98vw;
+    }
+
+    .result-header-container {
+    	font-size: .8em;
+    }
+
+    .result-container p {
+    	font-size: .8em;
+    }
+
+    .grey-box {
+    	font-size: .8em;
+    	width: 15vw;
+    }
+
+    .search-container {
+    	width: 90vw;
+    }
+}
+
+
+/*
+=========
+550 px
+=========
+*/
+
+@media (max-width: 550px) {
+	body {
+        font-size: .8em;
+    }
+    .result-container {
+    	grid-gap: .7em;
+    }
+}
+
+
+/*
+=========
+450 px
+=========
+*/
+
+@media (max-width: 450px) {
+	body {
+        font-size: .6em;
+    }
+}

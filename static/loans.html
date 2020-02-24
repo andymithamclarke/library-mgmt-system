@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>PontyBridge University: Library Navigation System - Loans</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+		<meta name="description" content="Library Navigation System for University of PontyBridge">
+
+	</head>
+
+	<body>
+
+		<!-- Link Axios -->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+		<header class="flex-container align-center">
+			<!--This section contains the logo & logo text for the page-->
+			<div class="logo-container align-center flex-container">
+				<img id="header-logo" src="Images/Ponty_logo.svg" alt="PontyBridge University Logo">
+				<p id="logo-text"><a href="index.html">PontyBridge University</a></p>
+			</div>
+			<p class="label-text"><a href="index.html">Home</a></p>
+		</header>
+
+		<!--
+		==================================
+		CONTROL PANEL SECTION 
+		==================================
+		-->
+
+		<section class="system-control-container flex-columns">
+			<h1>
+				<a href="index.html">Library Navigation System</a>
+			</h1>
+			<section>
+			<!-- Main Control Panel to access links to other pages-->
+				<div class="flex-container control-panel-container justify-center">
+					<a href="catalogue.html">
+						<button id="catalogue-control-button" class="button control-button">
+						Catalogue
+						</button>
+					</a>
+					<a href="users.html">
+						<button id="users-control-button" class="button control-button">
+						Users
+						</button>
+					</a>
+					<a href="loans.html">
+						<button id="loans-control-button" class="button control-button">
+							Loans
+						</button>
+					</a>
+				</div>
+			</section>
+			<div class="line-break"></div>
+		</section>
+
+		<!--
+		=========================
+		END OF CONTROL PANEL SECTION 
+		=========================
+		-->
+
+
+		<!--
+		=========================
+		NAVIGATION AREA SECTION
+		=========================
+		-->
+		<!-- Contains control buttons to make requests to db.Loan -->
+
+		<section class="navigation-area">
+			<div id="loans-control-bar" class="flex-container align-center">
+				<button id="add-loan-button" class="button catalogue-button">
+					Add Loan
+				</button>
+				<button id="delete-loan-button" class="button catalogue-button">
+					Delete Loan
+				</button>
+				<button id="update-loan-button" class="button catalogue-button">
+					Update Loan
+				</button>
+				<button id="search-loan-button" class="button catalogue-button">
+					Search Loans
+				</button>
+			</div>
+		</section>
+
+
+
+		<!--
+		=========================
+		END OF NAVIGATION AREA SECTION
+		=========================
+		-->
+
+
+		<!--
+		=========================
+		FORM SECTION (ADD, DELETE, UPDATE) 
+		=========================
+		-->
+		<!-- Forms to be created post get request (when the results are already displayed on the page -->
+		<section class="specific-form-creation-area justify-center flex-columns display-none">
+			<div class="specific-form-title flex-columns justify-center"></div>
+			<div class="specific-form-input flex-columns align-center"></div>
+
+		</section>
+
+		<!-- Response Message Section (Where response messages will be generated -->
+		<section class="display-none justify-center align-center response-message-section">
+						
+		</section>
+
+		<!-- Form Creation Area-->
+		<section class="form-modify-area justify-center flex-columns">
+			<section class="display-none justify-center align-center" id="add-loan-section">
+				
+			</section>
+			<section class="display-none justify-center align-center" id="delete-loan-section">
+				
+			</section>
+			<section class="display-none justify-center align-center" id="update-loan-section">
+				
+			</section>
+			<section class="display-none justify-center align-center" id="search-loan-section">
+				
+			</section>
+			
+		</section>
+
+		<section class="search-area modify-area">
+			
+		</section>
+
+
+		<!--
+		=========================
+		END OF FORM SECTION 
+		=========================
+		-->
+
+
+		<!-- 
+		==========================
+		RESULTS AREA: CONTAINS RESULTS OF QUERY
+		===========================
+		-->
+		<!--
+		THIS IS THE SECTION WHERE ELEMENTS WILL BE ADDED TO DISPLAY QUERY RESULTS
+		-->
+		<section class="results-background-area flex-columns">
+			<div class="results-header">
+
+			</div>
+			<div  class=" flex-columns results-field">
+		
+			</div>
+			
+		</section>
+		<!--
+		=========================
+		END OF RESULTS AREA SECTION 
+		=========================
+		-->
+
+		<!--
+		Footer to provide gap at bottom of page
+		-->
+		<footer>
+			
+		</footer>
+			<!--Link to specific JS file -->
+		<script src="loans.js" type="module"></script>
+	</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>PontyBridge University: Library Navigation System - Catalogue</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+		<meta name="description" content="Library Navigation System for University of PontyBridge">
+
+	</head>
+
+
+	<body>
+
+		<!-- Link Axios -->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+		<header class="flex-container align-center">
+			<!--This section contains the logo & logo text for the page-->
+			<div class="logo-container align-center flex-container">
+				<img id="header-logo" src="Images/Ponty_logo.svg" alt="PontyBridge University Logo">
+				<p id="logo-text"><a href="index.html">PontyBridge University</a></p>
+			</div>
+			<p id="home-link" class="label-text"><a href="index.html">Home</a></p>
+		</header>
+
+		<!--
+		==================================
+		CONTROL PANEL SECTION 
+		==================================
+		-->
+
+		<section class="system-control-container flex-columns">
+			<h1>
+				<a href="index.html">Library Navigation System</a>
+			</h1>
+			<section>
+			<!-- Main Control Panel to access links to other pages-->
+				<div class="flex-container control-panel-container justify-center">
+					<a href="catalogue.html">
+						<button id="catalogue-control-button" class="button control-button">
+						Catalogue
+						</button>
+					</a>
+					<a href="users.html">
+						<button id="users-control-button" class="button control-button">
+						Users
+						</button>
+					</a>
+					<a href="loans.html">
+						<button class="button control-button">
+							Loans
+						</button>
+					</a>
+				</div>
+			</section>
+			<div class="line-break"></div>
+		</section>
+
+
+
+		<!--
+		=========================
+		END OF CONTROL PANEL SECTION 
+		=========================
+		-->
+
+
+		<!--
+		=========================
+		AUTHOR OR BOOK DECISION PANEL
+		=========================
+		-->
+
+		<!-- Contains central control buttons to direct User to either Author functions or Book functions -->
+
+		<section class="navigation-area">
+
+			<div class="flex-container align-center" id="author-book-control-panel">
+				<button id="authors-button" class="button catalogue-button">
+					Authors
+				</button>
+				<button id="books-button" class="button catalogue-button">
+					Books
+				</button>
+			</div>
+
+		</section>
+
+		<!--
+		=========================
+		END OF AUTHOR OR BOOK DECISION PANEL
+		=========================
+		-->
+
+		<!--
+		=========================
+		FORM SECTION (ADD, DELETE, UPDATE) 
+		=========================
+		-->
+	<!-- Forms to be created post get request (when the results are already displayed on the page -->
+		<section class="specific-form-creation-area flex-columns display-none">
+			<div class="specific-form-title flex-columns justify-center"></div>
+			<div class="specific-form-input flex-columns align-center"></div>
+		</section>
+
+		<!-- Response Message Section (Where response messages will be generated -->
+		<section class="display-none justify-center align-center response-message-section">
+						
+		</section>
+
+		<!-- Form Creation Area-->
+		<section class="form-modify-area justify-center flex-columns">
+			<section class="display-none justify-center align-center" id="add-author-section">
+				
+			</section>
+			<section class="display-none justify-center align-center" id="delete-author-section">
+				
+			</section>
+			<section class="display-none justify-center align-center" id="update-author-section">
+				
+			</section>
+			<section class="display-none justify-center align-center" id="add-book-section">
+				
+			</section>
+			<section class="display-none justify-center align-center" id="delete-book-section">
+				
+			</section>
+			<section class="display-none justify-center align-center" id="update-book-section">
+				
+			</section>
+			
+		</section>
+
+		<!--
+		=========================
+		END OF FORM SECTION 
+		=========================
+		-->
+
+
+		<!--
+		=========================
+		SEARCH, ADD, UPDATE, DELETE SECTION
+		=========================
+		-->
+
+		<!-- SEARCH-->
+		<section class="navigation-area search-area">
+
+			<div class="search-container justify-center display-none">
+				<input title="Search Authors or Books" class="search-box" id="search-box" type="text" name="search-box" placeholder="Enter query then select search type;  ">
+				<select title="Choose how to search authors" id="search-authors-type-menu" class="small-grey-box">
+					<option>ID</option>
+					<option>Name</option>
+				</select>
+				<button id="search-authors-button" class="button sub-catalogue-button">
+					Search Authors
+				</button>
+				<select title="Choose how to search books" id="search-books-type-menu" class="small-grey-box">
+					<option>ID</option>
+					<option>Title</option>
+					<option>ISBN</option>
+					<option>Author</option>
+				</select>
+				<button id="search-books-button" class="button sub-catalogue-button">
+					Search Books
+				</button>
+			</div>
+
+		</section>
+
+
+		<!-- CHANGE ELEMENTS -->
+		<section class="navigation-area modify-area">
+			<!-- Authors -->
+			<div id="author-request-button-selection" class="add-update-delete-container justify-center display-none">
+				<button id="add-author-button" class="sub-catalogue-button button">Add New Author</button>
+				<button id="update-author-button" class="sub-catalogue-button button">Update Author Details</button>
+				<button id="delete-author-button" class="sub-catalogue-button button">Delete an Author</button>
+			</div>
+
+			<!-- Books -->
+			<div id="book-request-button-selection" class="add-update-delete-container justify-center display-none">
+				<button id="add-book-button" class="sub-catalogue-button button">Add Book</button>
+				<button id="update-book-button" class="sub-catalogue-button button">Update Book Details</button>
+				<button id="delete-book-button" class="sub-catalogue-button button">Delete a Book</button>
+			</div>
+
+
+		</section>
+
+
+		<!--
+		=========================
+		END OF SEARCH, ADD, UPDATE, DELETE SECTION
+		=========================
+		-->
+
+
+
+		<!-- 
+		==========================
+		RESULTS AREA: CONTAINS RESULTS OF QUERY
+		===========================
+		-->
+		<!--
+		THIS IS THE SECTION WHERE ELEMENTS WILL BE ADDED TO DISPLAY QUERY RESULTS
+		-->
+		<section class="flex-columns">
+			<div class="results-header">
+				
+			</div>
+			<div  class="results-field">
+		
+			</div>
+			
+		</section>
+
+		<!--
+		=========================
+		END OF RESULTS AREA SECTION 
+		=========================
+		-->
+
+		<!--
+		Footer to provide gap at bottom of page
+		-->
+		<footer>
+			
+		</footer>
+		<!--Link to specific JS file -->
+		<script type="module" src="catalogue.js"></script>
+	</body>
+</html>

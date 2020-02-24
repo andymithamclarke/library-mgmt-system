@@ -1,0 +1,29 @@
+
+
+This folder contains four JS files containing the utility functions created to assist with repetitive tasks.
+
+
+
+1. requests.js
+
+ Contains functions to make requests and the url variable
+
+
+
+2. changedisplay.js
+ 
+ Contains functions to modify the display of the DOM.
+ Also contains general DOM variables 
+
+
+
+3. render.js
+ 
+ Contains functions to render a HTTP response object on the HTML page
+
+
+
+4. form.js
+ 
+ Contains functions to create forms with select options and input boxes
+
